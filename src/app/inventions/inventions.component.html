@@ -1,0 +1,36 @@
+<!--
+    <h2>{{invention.name}}</h2>
+  
+    <h2>{{invention.inventor}}</h2>
+  
+    <h2>{{invention.year}}</h2>
+ -->
+
+< li *ngFor = "let i of inventions">
+    <div class = "invention">
+        <span> <b> Name: </b> {{i.name}} || </span>
+        <span> <b> Inventor: </b> {{i.inventor}} || </span>
+        <span> <b> Year: </b> {{i.year}}  </span>
+    </div>
+</li>
+
+<hr>
+
+<div class= "invention-creator">
+    <div>
+        <input [(ngModel)] = "nameModel" placeholder = "enter name ">
+    </div>
+
+
+    <div>
+        <input type= "text" [(ngModel)] = "inventorModel" placeholder = "enter inventor">
+    </div>
+
+
+    <div>
+        <input [(ngModel)] = "yearModel" placeholder = "year ">
+    </div>
+
+    <button class="btn" (click) = "createInvention()"> create invention</button>
+
+</div>
